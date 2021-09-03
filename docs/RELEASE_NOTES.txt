@@ -1,0 +1,19 @@
+# v.1.0.5
+- Se agrega el nuevo ValueObjects "TenantName".
+- Se actualiza el ValueObjects "FullName".
+- Se agrega la nueva ShadowPrperty "IDefault".
+
+# v.1.0.4
+- Se actualizan los Value Objects.
+
+# v.1.0.3
+- Se migra de la versión netcoreapp3 a net5 y se actualizan librerías.
+
+# v.1.0.2
+- Se actualizan las enumeraciones.
+
+# v.1.0.1
+- Se actualiza la versión de la líbreria Kitpymes.Core.Shared a la versión 1.0.7.
+
+# v.1.0.0
+- Se genera la primera versión del paquete del proyecto.

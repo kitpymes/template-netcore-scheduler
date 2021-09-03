@@ -1,0 +1,30 @@
+name: Kitpymes.Core.Entities
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        dotnet: [ '5.0.100', '5.0.200', '5.0.300' ]
+
+    name: NET ${{ matrix.dotnet }}
+
+    steps:  
+    - uses: actions/checkout@v2
+     
+    - name: Setup
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+
+    - name: Restore 
+      run: dotnet restore
+       
+    - name: Build 
+      run: dotnet build Solution.sln --configuration Release --no-restore
+     
+    - name: Tests
+      run: dotnet test --configuration Release --no-build --no-restore
